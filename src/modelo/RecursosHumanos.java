@@ -7,7 +7,7 @@ public class RecursosHumanos {
     public static RecursosHumanos recursosHumanos;
 
     public static RecursosHumanos getRecursosHumanos() {
-        if(recursosHumanos==null){
+        if(recursosHumanos == null){
             recursosHumanos = new RecursosHumanos();
         }
         return recursosHumanos;
@@ -29,19 +29,19 @@ public class RecursosHumanos {
 
     public double salarioTotal(){
         double salarioTotal = 0;
-        double salarioFIjo = 0;
+        double salarioFijo = 0;
         double salarioContrato = 0;
         for(Trabajador trabajador : trabajadores){
 
             if (trabajador instanceof TrabajadorFijo){
-                salarioFIjo = trabajador.salario();
+                salarioFijo = trabajador.salario();
             }
             else{
                 if(trabajador instanceof TrabajadorContratado){
                     salarioContrato = trabajador.salario();
                 }
             }
-            salarioTotal = salarioFIjo + salarioContrato;
+            salarioTotal = salarioFijo + salarioContrato;
         }
         return salarioTotal;
     }
@@ -51,7 +51,7 @@ public class RecursosHumanos {
         for(Trabajador trabajador : trabajadores){
             if(trabajador instanceof TrabajadorFijo){
                 if(((TrabajadorFijo) trabajador).getAntiguedad() > antiguedad){
-                    total+=1;
+                    total += 1;
                 }
             }
         }
