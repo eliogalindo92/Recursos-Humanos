@@ -34,11 +34,11 @@ public class RecursosHumanos {
         for(Trabajador trabajador : trabajadores){
 
             if (trabajador instanceof TrabajadorFijo){
-                salarioFijo = trabajador.salario();
+                salarioFijo += trabajador.salario();
             }
             else{
                 if(trabajador instanceof TrabajadorContratado){
-                    salarioContrato = trabajador.salario();
+                    salarioContrato += trabajador.salario();
                 }
             }
             salarioTotal = salarioFijo + salarioContrato;
