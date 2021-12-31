@@ -14,14 +14,16 @@ public class RecursosHumanos {
     }
 
     public RecursosHumanos() {
-        this.trabajadores = trabajadores;
+         trabajadores = new ArrayList<>();
     }
 
     public ArrayList<Trabajador> getTrabajadores() {
+
         return trabajadores;
     }
 
     public void setTrabajadores(ArrayList<Trabajador> trabajadores) {
+
         this.trabajadores = trabajadores;
     }
 
